@@ -6,23 +6,22 @@
 //(aplicando a promoção quando fizer sentido, claro).
 
 function solucao(precos) {
+    //seu codigo aqui   
+    let soma = 0;
+    let menorValor = precos[0];
 
-    if (precos.length >= 5) {
+    for (item of precos){     
 
-        let sum = 0;
-
-        for (let value = 0; value < precos.length; value++) {
-            sum += precos[value];
+        soma += item;        
+        if (menorValor > item){
+            menorValor = item;
         }
-        let newPrice = sum - Math.min(...precos);
-
-        console.log(newPrice);
-    } else {
-        let sum = 0;
-
-        for (let value = 0; value < precos.length; value++) {
-            sum += precos[value];
-        }
-        console.log(sum);
     }
+    
+    if (precos.length > 4){
+        soma -= menorValor;
+    }
+    
+    console.log (soma);     
+        
 }

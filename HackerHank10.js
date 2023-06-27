@@ -11,19 +11,17 @@
 //Imprima na tela apenas um número representando a quantidade de pontos ganhos pelo time na competição.
 
 function solucao(resultados) {
-
-    let win = 0;
-    let aTie = 0;
-
-    for (let p = 0; p < resultados.length; p++) {
-        if (resultados[p] === "V" || resultados[p] === "v") {
-            win += 3
-        } else if (resultados[p] === "E" || resultados[p] === "e") {
-            aTie++;
-        }
+    //seu codigo aqui
+    
+    let pontos = 0;
+    
+    for (resultado of resultados){
+        if (resultado === 'V'){
+            pontos += 3;
+        } else if (resultado === 'E'){
+            pontos += 1;
+        } 
     }
-
-    let totalPoints = win + aTie;
-
-    console.log(totalPoints);
+    
+    console.log(pontos);
 }

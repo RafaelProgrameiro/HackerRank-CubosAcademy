@@ -8,26 +8,24 @@
 
 
 function solucao(notas) {
+	//seu codigo aqui
+    
+    let maiorNota = 0;
+    let menorNota = notas[0];
+    let soma = 0;    
+    
+    for (nota of notas){
+        
+        if (maiorNota < nota){
+            maiorNota = nota;
+        }
 
-    let average = 0;
-    let count = 0;
-
-    let maxGrade = notas.indexOf(Math.max(...notas));
-    notas.splice(maxGrade, 1);
-
-    let minGrade = notas.indexOf(Math.min(...notas));
-    notas.splice(minGrade, 1);
-
-    for (let n = 0; n < notas.length; n++) {
-        average += notas[n];
-        count++;
-    }
-
-    let result = average / count;
-
-    console.log(result)
+        if (menorNota > nota){
+            menorNota = nota;
+        } 
+        
+        soma += nota;
+    }   
+    console.log((soma - maiorNota - menorNota) / (notas.length - 2));    
+       
 }
-
-let grades = [100, 100, 100, 20, 50, 30, 14, 100, 100, 100]
-
-console.log(solucao(grades));

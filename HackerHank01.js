@@ -3,6 +3,26 @@
 // !@#$%&*().
 
 function solucao(stringCorrompida) {
-    let newString = stringCorrompida.replace(/[!@#$%&*()]/g, "");
-    console.log(newString);
+    // seu codigo aqui
+    
+    let cleanString = '';
+
+    for (caractere of stringCorrompida) {
+    
+        if (caractere === '!'
+            || caractere === '@'
+            || caractere === '#'
+            || caractere === '$'
+            || caractere === '%'
+            || caractere === '&'
+            || caractere === '*'
+            || caractere === '('
+            || caractere === ')'){   
+                
+        } else {
+            
+            cleanString += caractere;
+        }       
+    }
+    console.log(cleanString);    
 }

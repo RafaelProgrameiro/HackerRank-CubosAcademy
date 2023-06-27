@@ -3,16 +3,21 @@
 //O seu papel é fazer um programa que calcule quantas crianças perderam na rodada.
 
 function solucao(letra, palavras) {
-
-    let error = 0;
-    let right = 0;
-
-    for (let i = 0; i < palavras.length; i++) {
-        if (palavras[i].startsWith(letra)) {
-            right++;
-        } else {
-            error++;
-        }
+	//seu codigo aqui    
+    let erros = 0;
+    
+    for (palavra of palavras){
+        
+        for (primeiraLetra of palavra) {
+             
+             if (primeiraLetra[0] == letra){
+                 break;
+            
+             } else {
+                 erros += 1;
+                 break;
+             }             
+        }     
     }
-    console.log(error);
+console.log(erros);      
 }

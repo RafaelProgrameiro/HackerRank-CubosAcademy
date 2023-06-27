@@ -6,16 +6,14 @@
 
 // A saída sempre será a quantidade de acertos do palpite.
 
-
 function solucao(palpite, palavra) {
-    let letter = 0;
-
-    for (let a = 0; a < palavra.length; a++) {
-
-        if (palavra[a] === palpite) {
-            letter++;
+	// seu codigo aqui    
+    let soma = 0;
+    
+    for (letra of palavra){
+        if(letra === palpite){
+            soma += 1;
         }
-    }
-
-    console.log(letter)
+    }    
+    console.log(soma);
 }

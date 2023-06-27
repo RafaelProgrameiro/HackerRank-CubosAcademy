@@ -9,28 +9,25 @@
 
 
 function solucao(sequencia) {
-    const carousel = [0, 1, 2, 3, 4, 5, 6];
-    let forward = 0;
-    let backward = 0;
+	//seu codigo aqui
+    
+    let indice = 0;
+    
+    for (click of sequencia){
+                        
+        if (click === '>'){
+            indice += 1;
+        } else {
+            indice += -1;
+        }    
+        
+        if (indice === 7){
+            indice = 0;
+        } else if (indice === -1){
+            indice = 6;
+        }                
+    }    
+    console.log(indice);    
+    
 
-    for (let i = 0; i < sequencia.length; i++) {
-
-        if (sequencia[i] === ">") {
-            forward++;
-        } else if (sequencia[i] === "<") {
-            backward++;
-        }
-    }
-
-    let position = forward - backward;
-
-    if (position >= carousel.length) {
-
-        position %= carousel.length;
-    } else if (position < 0) {
-
-        position = carousel.length - Math.abs(position) % carousel.length;
-    }
-
-    console.log(carousel[Math.abs(position)]);
 }

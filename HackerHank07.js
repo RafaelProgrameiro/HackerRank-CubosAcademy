@@ -12,20 +12,15 @@
 
 
 function solucao(disparos) {
-
-    let counter = 0;
-
-    for (let c = 0; c < disparos.length; c++) {
-
-        if (disparos[c] > 70) {
-            counter++;
+	//seu codigo aqui    
+    let acertos = 0;
+    
+    for (disparo of disparos){
+        if (disparo > 70){
+            acertos += 1
         }
     }
-
-    if (counter >= 3) {
-        console.log(counter);
-    } else {
-        console.log('ELIMINADO');
-    }
-
+    
+    (acertos >= 3 ? console.log(acertos) : console.log('ELIMINADO')); 
+    
 }

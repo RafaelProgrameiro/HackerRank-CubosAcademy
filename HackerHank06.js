@@ -20,24 +20,21 @@
 //Caso não nenhuma palavra do array de palavras atenda aos requisitos, imprima na tela NENHUMA
 
 function solucao(primeiraLetra, segundaLetra, palavras) {
-
-    let foundWord = false;
-
-    for (let i = 0; i < palavras.length; i++) {
-
-        let word = palavras[i];
-
-
-        if (word.startsWith(primeiraLetra + segundaLetra)) {
-
-            console.log(word);
-            foundWord = true;
-
-
-        } else if (!foundWord) {
-            console.log("NENHUMA");
-            break // Para melhor taxa de acerto, colocar o !foundWord fora do laço for
-        }
+    //seu codigo aqui
+    
+    let texto = false;
+        
+    for (palavra of palavras){
+        if (palavra[0] === primeiraLetra && palavra[1] === segundaLetra){
+            texto = true;
+            if (texto){
+                console.log(palavra);
+            }
+        }        
     }
 
+    if (!texto) {
+        console.log('NENHUMA');
+    }   
+  
 }
